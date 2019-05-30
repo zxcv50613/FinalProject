@@ -7,7 +7,24 @@
   <version>1.0</version>
   <name>FinalProject Maven Webapp</name>
   <url>http://maven.apache.org</url>
+  
+  <properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<java-version>11</java-version>
+	</properties>
   <dependencies>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
+		<!-- Servlet 3.0 API -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.0.1</version>
+			<scope>provided</scope>
+		</dependency>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>

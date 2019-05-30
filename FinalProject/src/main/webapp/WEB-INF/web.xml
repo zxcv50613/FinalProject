@@ -4,4 +4,12 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  
+    <resource-ref>
+    <res-ref-name>jdbc/wang</res-ref-name>
+    <res-type>javax.sql.DataSource</res-type>
+    <res-auth>Container</res-auth>
+    <res-sharing-scope>Shareable</res-sharing-scope>
+  </resource-ref>
+  
 </web-app>
