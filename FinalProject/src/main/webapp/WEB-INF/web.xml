@@ -4,14 +4,12 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
-  <servlet>
-  	<servlet-name>InsertServlet</servlet-name>
-  	<display-name>InsertServlet</display-name>
-  	<description></description>
-  	<servlet-class>controller.InsertServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>InsertServlet</servlet-name>
-  	<url-pattern>/InsertServlet</url-pattern>
-  </servlet-mapping>
+
+    <resource-ref>
+    <res-ref-name>jdbc/wang</res-ref-name>
+    <res-type>javax.sql.DataSource</res-type>
+    <res-auth>Container</res-auth>
+    <res-sharing-scope>Shareable</res-sharing-scope>
+  </resource-ref>
+  
 </web-app>

@@ -3,7 +3,7 @@ package model;
 public class UserBean {
 	
 	private String memberId ;
-	private byte memberPassword ;
+	private byte[] memberPassword ;
 	private String memberEmail;
 	private String memberPhone;
 
@@ -15,11 +15,11 @@ public class UserBean {
 		this.memberId = memberId;
 	}
 
-	public byte getMemberPassword() {
+	public byte[] getMemberPassword() {
 		return memberPassword;
 	}
 
-	public void setMemberPassword(byte memberPassword) {
+	public void setMemberPassword(byte[] memberPassword) {
 		this.memberPassword = memberPassword;
 	}
 
