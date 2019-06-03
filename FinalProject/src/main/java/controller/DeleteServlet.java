@@ -1,6 +1,7 @@
 package controller;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -39,7 +40,10 @@ public class DeleteServlet extends HttpServlet {
 			RequestDispatcher rd= request.getRequestDispatcher("");
 			rd.forward(request, response);
 		}
-		UserBean bean=service1.delete(memberId,memberPassword);
+		UserBean bean;
+		try {
+			bean = service1.delete(memberId,memberPassword);
+		
 		if(bean!=null) {
 			session.setAttribute("succeed","刪除成功");
 			RequestDispatcher rd= request.getRequestDispatcher("");
@@ -49,7 +53,9 @@ public class DeleteServlet extends HttpServlet {
 			RequestDispatcher rd= request.getRequestDispatcher("");
 			rd.forward(request, response);
 		}
-		
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 	}
 
 }

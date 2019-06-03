@@ -59,7 +59,8 @@ public class UserBean{
 				+ ", memberEmail=" + memberEmail + ", memberPhone=" + memberPhone + "]";
 	}
 	
-	
-	
-	
 }
+
+	
+
+
